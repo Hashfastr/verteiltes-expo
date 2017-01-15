@@ -1,0 +1,1 @@
+sudo gcc -o exe -std=gnu11 Server.c -lm -lpthread
