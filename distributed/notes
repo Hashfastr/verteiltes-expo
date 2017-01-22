@@ -1,0 +1,5 @@
+/usr/bin/time -f "%e" mpiexec -n 16 -f machinefile ./exe 1000000
+
+mpicc prime.c -o exe -std=gnu11 -lm
+
+mpiexec -n 16 -f machinefile ./exe 1000000
