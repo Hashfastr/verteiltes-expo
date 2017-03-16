@@ -1,5 +1,8 @@
+#time distributed program
 /usr/bin/time -f "%e" mpiexec -n 16 -f machinefile ./exe 1000000
 
+#compile the distributed program
 mpicc prime.c -o exe -std=gnu11 -lm
 
+#run distributed program
 mpiexec -n 16 -f machinefile ./exe 1000000
